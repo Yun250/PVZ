@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Plants vs Zombies</title>
+		<link rel="stylesheet" type="text/css" href="css/menu.css">
+
+		<script src="js/p5.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/p5.sound.js"></script>
+	</head>
+
+	<body>
+
+		<input type="checkbox" name="activaVentana2" id="activaVentana2" style="display: none;">
+	 	<!-- Ventana modal de la portada del juego -->
+		<div class="ventanaModal2" id="ventanaModal2">
+			<label for="activaVentana3">
+				<div id="botonesMenu"></div>
+				<img src="img/Otras/menu.png" id="imgMenu">
+			</label>
+		</div>
+
+		<input type="checkbox" name="activaVentana" id="activaVentana" style="display: none;">
+	 	<!-- Ventana modal del juego -->
+		<div class="ventanaModal">
+			<label for="activaVentana">
+				<img src="img/Otras/principal.png" id="imgMenu">
+			</label>
+		</div>
+
+		<input type="checkbox" name="activaVentana3" id="activaVentana3" style="display: none;">
+	 	<!-- Ventana modal de la seleccion del menu -->
+		<div class="ventanaModal3">
+			<label for="activaVentana3">
+				<img src="img/Otras/tumba.png" id="tumba">
+			</label>
+			
+			<div id="formularioNivel">
+				<form>
+					<h1 id="tituloNivel">Seleccione el nivel</h1>
+
+					<label>
+						<input type="radio" value="1" name="nivel" onclick="elegirNivel(1)" checked="">
+						Nivel 1<br>
+					</label>
+					
+					<label>
+						<input type="radio" value="1" name="nivel" onclick="elegirNivel(2)">
+						Nivel 2<br>
+					</label>
+
+					<label>
+						<input type="radio" value="1" name="nivel" onclick="elegirNivel(3)">
+						Nivel 3
+					</label>
+					
+					<br><br>
+					<label for="activaVentana3" onclick="iniciarJuego()" id="tituloJugar"><b>Jugar</b></label>
+
+					<input type="hidden" id="nivelJugar" value="1">
+					<input type="hidden" id="jugar" value="0">
+				</form>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		function iniciarJuego()
+		{
+			document.getElementById('ventanaModal2').style.display='none'
+			document.getElementById("jugar").value=1;
+		}
+
+		function elegirNivel(nivel)
+		{
+			document.getElementById("nivelJugar").value=nivel;
+		}
+	</script>
+</html>

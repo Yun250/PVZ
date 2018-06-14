@@ -1,0 +1,112 @@
+
+body{
+    margin: 0%;
+    background-color: black;
+}
+
+.ventanaModal{   
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    float: left;
+    
+    background-color: black;
+    
+    box-sizing: border-box;
+    visibility: visible;
+    position: fixed;
+    -webkit-transition: all 0.3s;
+}
+#activaVentana:checked ~ .ventanaModal{
+    top: -100%;
+    left: -100%;
+}
+#activaVentana{
+    visibility: hidden;
+}
+
+.ventanaModal2{   
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    float: left;
+    
+    background-color: black;
+    
+    box-sizing: border-box;
+    visibility: visible;
+    position: fixed;
+    -webkit-transition: all 0.3s;
+}
+#activaVentana2:checked ~ .ventanaModal2{
+    top: -100%;
+    right: -100%;
+}
+#activaVentana2{
+    visibility: hidden;
+}
+
+.ventanaModal3{   
+    margin-left: 33%;
+    margin-top: 7%;
+    
+    width: 33%;
+    height: 100%;
+    top: -100%;
+
+    background-color: none;
+    
+    box-sizing: border-box;
+    visibility: visible;
+    position: fixed;
+    -webkit-transition: all 0.3s;
+}
+#activaVentana3:checked ~ .ventanaModal3{
+    top: 0%;
+}
+#activaVentana3{
+    visibility: hidden;
+}
+
+#imgMenu{
+    width: 1365px;
+    height: 650px;
+    background-color: black;
+}
+
+#tumba{
+    width: 400px;
+    height: 400px;
+}
+
+#formularioNivel{
+    margin-left: 33%;
+    margin-top: -62%;
+}
+
+#tituloNivel{
+    margin-top: -30%;
+    margin-left: -25%;
+}
+#tituloJugar{
+    margin-left: 8%;
+}
+
+#botonesMenu{
+  position: absolute;
+  width: 500px;
+  height: 217px;
+  margin-left: 52%;
+  margin-top: 8%;
+  background: transparent url("../img/Otras/jugar.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px; 
+  border:none;
+  outline: none;
+}
+#botonesMenu:hover{
+  background-position: 0px -222px;
+  transform: scale(1.02);
+}
